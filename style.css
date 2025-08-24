@@ -1,0 +1,71 @@
+
+:root{
+    --brand-yellow: #ffc107;
+    --brand-black:  #0f0f0f;
+    --brand-white:  #ffffff;
+    --brand-grey:   #f5f5f5;
+}
+
+/* ---- Global ---- */
+html,body{background: var(--brand-grey); color:#222;}
+body{font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;}
+
+
+h1,h2,h3,.nav-link,.label-uc{font-family:'Montserrat', 'Oswald', Arial, sans-serif; text-transform:uppercase; letter-spacing:.4px;}
+
+/* Header bar */
+.header-bar{background: var(--brand-black); color: var(--brand-white);}
+.navbar-brand{color: var(--brand-yellow) !important; font-weight:800; letter-spacing:.5px;}
+.navbar .nav-link{color: var(--brand-white) !important; font-weight:700; opacity:.9;}
+.navbar .nav-link:hover{color: var(--brand-yellow) !important; opacity:1;}
+.subbar{background: var(--brand-yellow); height:44px;}
+
+/* Card shell for each step */
+.checkout-card{
+    background: var(--brand-white);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    padding: 28px;
+}
+
+/* Labels & inputs */
+.form-label{font-weight:700; font-size:.85rem; text-transform:uppercase; color:#333;}
+.form-control, .form-select{
+    border-radius: 10px;
+    border-color:#ddd;
+    padding:.65rem .9rem;
+}
+.form-control:focus, .form-select:focus{
+    border-color: var(--brand-yellow);
+    box-shadow: 0 0 0 .2rem rgba(255,193,7,.25);
+}
+
+/* Brand buttons */
+.btn-brand{
+    background: var(--brand-yellow);
+    color:#111;
+    font-weight:800;
+    border:none;
+    border-radius: 999px;
+    padding:.75rem 1.25rem;
+}
+.btn-brand:hover{filter:brightness(.93); color:#111;}
+
+.btn-outline-dark{border-width:2px; font-weight:700; border-radius:999px;}
+
+/* Stepper */
+.stepper{display:flex; gap:8px; margin:0 0 18px;}
+.stepper .step{flex:1; height:6px; background:#dcdcdc; border-radius:999px;}
+.stepper .step.done{background:#444;}
+.stepper .step.active{background: var(--brand-yellow);}
+
+/* Footer help text */
+.muted{color:#666; font-size:.9rem;}
+
+.form-control, .form-select { height: 44px; }
+
+/* Remove weird inner spacing some browsers/extensions add */
+.form-control, .form-select { line-height: 1.25; }
+
+/* Make each column stack its label + control neatly */
+.row.gx-3.gy-3 > [class*="col-"] { display:flex; flex-direction:column; }
